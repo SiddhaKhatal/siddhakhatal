@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Policy + Econ</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">YOUR NAME</a>
+      <nav class="nav">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#work">Research</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="profile">
+        <img class="photo" src="assets/photo.jpg" alt="Photo of YOUR NAME" />
+
+        <div class="profile-right">
+          <h1 class="name">YOUR NAME</h1>
+
+          <p class="line">
+            Policy and economics student. Methods-first work across domains. Applying for policy, strategy, consulting, and finance roles.
+          </p>
+
+          <div class="buttons">
+            <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a>
+            <a class="btn" href="#work">Research and projects</a>
+            <a class="btn" href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="mailto:YOUR_EMAIL">Email</a>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Causal inference</span>
+            <span class="tag">Applied finance</span>
+            <span class="tag">Markets and incentives</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="h2">About</h2>
+      <div class="about">
+        <p>Write 3 to 5 sentences. Lead with the questions you like to answer.</p>
+        <p>Write 2 sentences on the methods you use and what “good evidence” means to you.</p>
+        <p>Write 1 sentence on what roles you are targeting and what you want to learn next.</p>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <h2 class="h2">Research and projects</h2>
+      <p class="sub">PDFs open in a new tab. Keep entries short and scannable.</p>
+
+      <div class="item">
+        <div class="item-left">
+          <div class="item-title">Paper 1 title as a question</div>
+          <div class="item-meta">Method: RD | Domain: Environment | Year: 2025</div>
+          <div class="item-one">One line on what you found or built.</div>
+        </div>
+        <div class="item-right">
+          <a class="mini" href="assets/paper1.pdf" target="_blank" rel="noreferrer">PDF</a>
+          <a class="mini" href="LINK_TO_CODE" target="_blank" rel="noreferrer">Code</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-left">
+          <div class="item-title">Project 2 title as a question</div>
+          <div class="item-meta">Method: DCF | Domain: Infrastructure | Year: 2025</div>
+          <div class="item-one">One line on the decision and the output you delivered.</div>
+        </div>
+        <div class="item-right">
+          <a class="mini" href="assets/paper2.pdf" target="_blank" rel="noreferrer">PDF</a>
+          <a class="mini" href="LINK_TO_DECK" target="_blank" rel="noreferrer">Deck</a>
+        </div>
+      </div>
+
+      <div class="footer">
+        <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+        <span class="sep">•</span>
+        <a href="YOUR_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+        <span class="sep">•</span>
+        <a href="YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
