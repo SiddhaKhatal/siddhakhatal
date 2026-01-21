@@ -10,7 +10,7 @@
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <div class="brand">Siddha Khatal</div>
+      <a class="brand" href="index.html">Siddha Khatal</a>
       <nav class="nav">
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#work">Work</a>
@@ -21,44 +21,50 @@
   <main class="wrap">
     <section class="card hero">
       <div class="profile">
-        <img class="photo" src="img/photo.jpg" alt="Photo of Siddha Khatal">
-
+        <button class="photo-wrap" id="photoBtn" type="button" aria-label="Open fun fact">
+          <img class="photo" src="img/photo.jpg" alt="Photo of Siddha Khatal">
+          <span class="photo-hint">Click</span>
+        </button>
 
         <div>
           <h1 class="name">Siddha Khatal</h1>
+
           <p class="subtitle">
-            Policy and economics student. Methods-first work across domains. I build credible evidence and decision-ready models for real constraints.
+            I use economics and policy tools to answer real questions. I like messy data and hard constraints. I turn analysis into decisions.
           </p>
 
           <div class="cta">
-          <a class="btn primary" href="/siddhakhatal/files/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-            <a class="btn secondary" href="#work">Projects</a>
-            <a class="btn" href="mailto:siddha3014@uchicag.edu">Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn primary" href="/siddhakhatal/files/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            <a class="btn secondary" href="#work">Work</a>
+            <a class="btn accent" href="mailto:siddha3014@uchicag.edu">Email</a>
+            <a class="btn accent2" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
 
           <div class="pills">
-         <a class="pill-link" href="causal.html">Causal inference</a>
-        <a class="pill-link" href="policy.html">Policy and economic development</a>
-         <a class="pill-link" href="finance.html">Applied finance</a>
-         <a class="pill-link" href="fun.html">Fun facts</a>
-         </div>
-
+            <a class="pill-link" href="causal.html">Causal inference</a>
+            <a class="pill-link" href="policy.html">Policy and economic development</a>
+            <a class="pill-link" href="finance.html">Applied finance</a>
+            <a class="pill-link" href="fun.html">Fun facts</a>
+          </div>
 
           <div class="grid">
             <div class="mini-card">
               <p class="mini-title">How I work</p>
-              <p class="mini-text">Define the decision, map assumptions, then pick a method that survives scrutiny.</p>
+              <p class="mini-text">Define the decision. Map assumptions. Pick a method that survives scrutiny.</p>
             </div>
             <div class="mini-card">
               <p class="mini-title">What I deliver</p>
-              <p class="mini-text">Clean datasets, reproducible analysis, and writing that makes results legible.</p>
+              <p class="mini-text">Clean datasets. Reproducible analysis. Writing that makes results legible.</p>
             </div>
             <div class="mini-card">
               <p class="mini-title">Why it transfers</p>
               <p class="mini-text">Same toolkit, different domains. Policy, strategy, consulting, and finance.</p>
             </div>
           </div>
+
+          <p class="micro-note">
+            Want the work. Click a category above.
+          </p>
         </div>
       </div>
     </section>
@@ -66,58 +72,107 @@
     <section id="about" class="card section">
       <h2 class="h2">About</h2>
       <p class="lead">
-        I focus on questions where evidence changes decisions. I like messy data, institutional detail, and real constraints. I build clean identification or transparent models, then communicate results in plain language.
+        I care about questions where evidence changes decisions. I like institutional detail and real constraints. I build transparent models and communicate results clearly.
       </p>
     </section>
 
     <section id="work" class="card section">
-      <h2 class="h2">Research and projects</h2>
+      <h2 class="h2">Work</h2>
       <p class="lead">
-        This is intentionally cross-domain. The throughline is method and judgment. PDFs will be added after the layout is final.
+        Choose a lane. Each page has PDFs and short context.
       </p>
 
-      <div class="list">
-        <div class="item">
-          <div>
-            <div class="item-title">Voter-approved conservation funds and biodiversity</div>
-            <div class="item-meta">Regression discontinuity · Environmental policy</div>
-            <p class="item-one">Estimated causal effects using election thresholds and biodiversity outcomes.</p>
+      <div class="tiles home-tiles">
+        <a class="tile" href="causal.html">
+          <div class="tile-top">
+            <div class="tile-title">Causal inference</div>
+            <div class="chip">Open</div>
           </div>
-          <div class="item-right">
-            <span class="badge"><span class="dot"></span>PDF soon</span>
-          </div>
-        </div>
+          <div class="tile-meta">RDD · RCT · program evaluation</div>
+          <div class="tile-desc">Impact questions. Clean identification. Clear assumptions.</div>
+        </a>
 
-        <div class="item">
-          <div>
-            <div class="item-title">Investments under financial constraints</div>
-            <div class="item-meta">DCF · Project finance</div>
-            <p class="item-one">Built long-horizon cash flow and repayment models to support decisions under uncertainty.</p>
+        <a class="tile" href="policy.html">
+          <div class="tile-top">
+            <div class="tile-title">Policy and economic development</div>
+            <div class="chip">Open</div>
           </div>
-          <div class="item-right">
-            <span class="badge"><span class="dot"></span>PDF soon</span>
-          </div>
-        </div>
+          <div class="tile-meta">Growth · jobs · public sector</div>
+          <div class="tile-desc">Policy work that connects institutions to outcomes.</div>
+        </a>
 
-        <div class="item">
-          <div>
-            <div class="item-title">Tourism, jobs, and growth across countries</div>
-            <div class="item-meta">Panel data · Development economics</div>
-            <p class="item-one">Constructed a cross-country panel and tested relationships between sector growth and labor outcomes.</p>
+        <a class="tile" href="finance.html">
+          <div class="tile-top">
+            <div class="tile-title">Applied finance</div>
+            <div class="chip">Open</div>
           </div>
-          <div class="item-right">
-            <span class="badge"><span class="dot"></span>PDF soon</span>
+          <div class="tile-meta">DCF · valuation · decisions</div>
+          <div class="tile-desc">Models that support choices under constraints.</div>
+        </a>
+
+        <a class="tile" href="fun.html">
+          <div class="tile-top">
+            <div class="tile-title">Fun facts</div>
+            <div class="chip ghost">Light</div>
           </div>
-        </div>
+          <div class="tile-meta">Personality</div>
+          <div class="tile-desc">Small things that make me me.</div>
+        </a>
       </div>
 
       <div class="footer">
-        <a href="mailto:siddha3014@uchicago.edu">Siddha3014@uchicago.edu</a><span class="sep">•</span>
+        <a href="mailto:siddha3014@uchicag.edu">siddha3014@uchicag.edu</a>
+        <span class="sep">•</span>
         <a href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>
+
+  <div class="modal" id="funModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="funTitle">
+      <div class="modal-top">
+        <div class="modal-title" id="funTitle">Fun fact</div>
+        <button class="icon-btn" id="closeModal" type="button" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        Can somehow tell the difference between Diet Coke, Coke Zero, and Diet Pepsi.
+      </div>
+      <div class="modal-actions">
+        <a class="btn secondary" href="fun.html">More fun facts</a>
+        <button class="btn" id="okModal" type="button">Got it</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("funModal");
+    const openBtn = document.getElementById("photoBtn");
+    const closeBtn = document.getElementById("closeModal");
+    const okBtn = document.getElementById("okModal");
+
+    function openModal() {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+    }
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+    okBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+  </script>
 </body>
 </html>
-
-
