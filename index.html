@@ -7,58 +7,29 @@
   <link rel="stylesheet" href="static/style.css">
 </head>
 
-<!-- Fun fact popup (hidden by default) -->
-<div id="funfactOverlay" class="overlay" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="funfactTitle">
-    <div class="modal-head">
-      <div id="funfactTitle" class="modal-title">Fun fact</div>
-      <button id="funfactClose" class="modal-close" type="button" aria-label="Close">×</button>
-    </div>
-    <div class="modal-body">
-      Can somehow tell the difference between Diet Coke, Coke Zero, and Diet Pepsi.
+<body>
+  <div id="funfactOverlay" class="overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="funfactTitle">
+      <div class="modal-head">
+        <div id="funfactTitle" class="modal-title">Fun fact</div>
+        <button id="funfactClose" class="modal-close" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        Can somehow tell the difference between Diet Coke, Coke Zero, and Diet Pepsi.
+      </div>
+      <div class="page-footer" style="margin-top: 20px; justify-content: center;">
+        <a class="btn secondary" href="fun.html">More fun facts</a>
+        <button class="btn primary" id="okBtn" type="button">Got it</button>
+      </div>
     </div>
   </div>
-</div>
-<script>
-  const photoBtn = document.getElementById("photoBtn");
-  const overlay = document.getElementById("funfactOverlay");
-  const closeBtn = document.getElementById("funfactClose");
 
-  function openFunFact() {
-    overlay.classList.add("show");
-    overlay.setAttribute("aria-hidden", "false");
-  }
-
-  function closeFunFact() {
-    overlay.classList.remove("show");
-    overlay.setAttribute("aria-hidden", "true");
-  }
-
-  if (photoBtn) {
-    photoBtn.addEventListener("click", openFunFact);
-    photoBtn.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") openFunFact();
-    });
-  }
-
-  closeBtn.addEventListener("click", closeFunFact);
-
-  overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) closeFunFact();
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeFunFact();
-  });
-</script>
-
-<body>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="index.html">Siddha Khatal</a>
       <nav class="nav">
         <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="policy.html">Work</a>
       </nav>
     </div>
   </header>
@@ -66,24 +37,21 @@
   <main class="wrap">
     <section class="card hero">
       <div class="profile">
-        <button class="photo-wrap" id="photoBtn" type="button" aria-label="Open fun fact">
-          <img id="photoBtn" class="photo" src="img/photo.jpg" alt="Photo of Siddha Khatal" role="button" tabindex="0">
-
-          <span class="photo-hint">Click</span>
-        </button>
+        <div class="photo" id="photoBtn" style="cursor: pointer;">
+          <img class="photo" src="img/photo.jpg" alt="Siddha Khatal">
+          <div style="position: absolute; bottom: 5px; width: 100%; text-align: center; color: white; background: rgba(0,0,0,0.3); font-size: 10px;">Click</div>
+        </div>
 
         <div>
           <h1 class="name">Siddha Khatal</h1>
-
           <p class="subtitle">
             I use economics and policy tools to answer real questions. I like messy data and hard constraints. I turn analysis into decisions.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="/siddhakhatal/files/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
-            <a class="btn secondary" href="#work">Work</a>
-            <a class="btn accent" href="mailto:siddha3014@uchicag.edu">Email</a>
-            <a class="btn accent2" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn primary" href="files/resume.pdf" target="_blank">Resume</a>
+            <a class="btn" href="mailto:siddha3014@uchicago.edu">Email</a>
+            <a class="btn" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
           </div>
 
           <div class="pills">
@@ -107,10 +75,6 @@
               <p class="mini-text">Same toolkit, different domains. Policy, strategy, consulting, and finance.</p>
             </div>
           </div>
-
-          <p class="micro-note">
-            Want the work. Click a category above.
-          </p>
         </div>
       </div>
     </section>
@@ -121,58 +85,42 @@
         I care about questions where evidence changes decisions. I like institutional detail and real constraints. I build transparent models and communicate results clearly.
       </p>
     </section>
-      <div class="footer">
-        <a href="mailto:siddha3014@uchicag.edu">siddha3014@uchicag.edu</a>
-        <span class="sep">•</span>
-        <a href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
-    </section>
+
+    <div class="footer" style="text-align: center; padding: 20px;">
+      <a href="mailto:siddha3014@uchicago.edu">siddha3014@uchicago.edu</a>
+      <span class="sep">•</span>
+      <a href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
+    </div>
   </main>
 
-  <div class="modal" id="funModal" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="funTitle">
-      <div class="modal-top">
-        <div class="modal-title" id="funTitle">Fun fact</div>
-        <button class="icon-btn" id="closeModal" type="button" aria-label="Close">✕</button>
-      </div>
-      <div class="modal-body">
-        Can somehow tell the difference between Diet Coke, Coke Zero, and Diet Pepsi.
-      </div>
-      <div class="modal-actions">
-        <a class="btn secondary" href="fun.html">More fun facts</a>
-        <button class="btn" id="okModal" type="button">Got it</button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    const modal = document.getElementById("funModal");
-    const openBtn = document.getElementById("photoBtn");
-    const closeBtn = document.getElementById("closeModal");
-    const okBtn = document.getElementById("okModal");
+    const photoBtn = document.getElementById("photoBtn");
+    const overlay = document.getElementById("funfactOverlay");
+    const closeBtn = document.getElementById("funfactClose");
+    const okBtn = document.getElementById("okBtn");
 
-    function openModal() {
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("no-scroll");
+    function openFunFact() {
+      overlay.classList.add("show");
+      overlay.setAttribute("aria-hidden", "false");
     }
 
-    function closeModal() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("no-scroll");
+    function closeFunFact() {
+      overlay.classList.remove("show");
+      overlay.setAttribute("aria-hidden", "true");
     }
 
-    openBtn.addEventListener("click", openModal);
-    closeBtn.addEventListener("click", closeModal);
-    okBtn.addEventListener("click", closeModal);
+    photoBtn.addEventListener("click", openFunFact);
+    closeBtn.addEventListener("click", closeFunFact);
+    okBtn.addEventListener("click", closeFunFact);
 
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
+    // Close if clicking the dark area outside the box
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeFunFact();
     });
 
+    // Close on Escape key
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+      if (e.key === "Escape") closeFunFact();
     });
   </script>
 </body>
