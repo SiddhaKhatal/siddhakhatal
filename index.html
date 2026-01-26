@@ -29,7 +29,7 @@
       <a class="brand" href="index.html">Siddha Khatal</a>
       <nav class="nav">
         <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="policy.html">Work</a>
+        <a class="nav-link" href="#work">Work</a>
       </nav>
     </div>
   </header>
@@ -50,11 +50,11 @@
 
           <div class="cta">
             <a class="btn primary" href="files/resume.pdf" target="_blank">Resume</a>
-            <a class="btn" href="mailto:siddha3014@uchicago.edu">Email</a>
-            <a class="btn" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
+            <a class="btn primary" href="mailto:siddha3014@uchicago.edu">Email</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
           </div>
 
-          <div class="pills">
+          <div id="work" class="pills" style="scroll-margin-top: 80px;">
             <a class="pill-link" href="causal.html">Causal inference</a>
             <a class="pill-link" href="policy.html">Policy and economic development</a>
             <a class="pill-link" href="finance.html">Applied finance</a>
@@ -85,12 +85,6 @@
         I care about questions where evidence changes decisions. I like institutional detail and real constraints. I build transparent models and communicate results clearly.
       </p>
     </section>
-
-    <div class="footer" style="text-align: center; padding: 20px;">
-      <a href="mailto:siddha3014@uchicago.edu">siddha3014@uchicago.edu</a>
-      <span class="sep">•</span>
-      <a href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
-    </div>
   </main>
 
   <script>
@@ -99,29 +93,9 @@
     const closeBtn = document.getElementById("funfactClose");
     const okBtn = document.getElementById("okBtn");
 
-    function openFunFact() {
-      overlay.classList.add("show");
-      overlay.setAttribute("aria-hidden", "false");
-    }
-
-    function closeFunFact() {
-      overlay.classList.remove("show");
-      overlay.setAttribute("aria-hidden", "true");
-    }
-
-    photoBtn.addEventListener("click", openFunFact);
-    closeBtn.addEventListener("click", closeFunFact);
-    okBtn.addEventListener("click", closeFunFact);
-
-    // Close if clicking the dark area outside the box
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) closeFunFact();
-    });
-
-    // Close on Escape key
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeFunFact();
-    });
+    photoBtn.onclick = () => { overlay.classList.add("show"); overlay.setAttribute("aria-hidden", "false"); }
+    closeBtn.onclick = okBtn.onclick = () => { overlay.classList.remove("show"); overlay.setAttribute("aria-hidden", "true"); }
+    overlay.onclick = (e) => { if (e.target === overlay) overlay.classList.remove("show"); }
   </script>
 </body>
 </html>
