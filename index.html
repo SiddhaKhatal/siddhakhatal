@@ -7,6 +7,51 @@
   <link rel="stylesheet" href="static/style.css">
 </head>
 
+<!-- Fun fact popup (hidden by default) -->
+<div id="funfactOverlay" class="overlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="funfactTitle">
+    <div class="modal-head">
+      <div id="funfactTitle" class="modal-title">Fun fact</div>
+      <button id="funfactClose" class="modal-close" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      Can somehow tell the difference between Diet Coke, Coke Zero, and Diet Pepsi.
+    </div>
+  </div>
+</div>
+<script>
+  const photoBtn = document.getElementById("photoBtn");
+  const overlay = document.getElementById("funfactOverlay");
+  const closeBtn = document.getElementById("funfactClose");
+
+  function openFunFact() {
+    overlay.classList.add("show");
+    overlay.setAttribute("aria-hidden", "false");
+  }
+
+  function closeFunFact() {
+    overlay.classList.remove("show");
+    overlay.setAttribute("aria-hidden", "true");
+  }
+
+  if (photoBtn) {
+    photoBtn.addEventListener("click", openFunFact);
+    photoBtn.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") openFunFact();
+    });
+  }
+
+  closeBtn.addEventListener("click", closeFunFact);
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeFunFact();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeFunFact();
+  });
+</script>
+
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
@@ -22,7 +67,8 @@
     <section class="card hero">
       <div class="profile">
         <button class="photo-wrap" id="photoBtn" type="button" aria-label="Open fun fact">
-          <img class="photo" src="img/photo.jpg" alt="Photo of Siddha Khatal">
+          <img id="photoBtn" class="photo" src="img/photo.jpg" alt="Photo of Siddha Khatal" role="button" tabindex="0">
+
           <span class="photo-hint">Click</span>
         </button>
 
