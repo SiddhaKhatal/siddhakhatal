@@ -44,15 +44,18 @@
 
         <div>
           <h1 class="name">Siddha Khatal</h1>
-          <p class="subtitle">I use economics and policy tools to answer real questions. I like messy data and hard constraints. I turn analysis into decisions.</p>
+          <p class="subtitle">
+            I use economics and policy tools to answer real questions. I like messy data and hard constraints. I turn analysis into decisions.
+          </p>
 
           <div class="cta">
             <a class="btn primary" href="files/resume.pdf" target="_blank">Resume</a>
-            <a class="btn" href="mailto:siddha3014@uchicago.edu">Email</a>
-            <a class="btn" href="https://linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
+            <a class="btn secondary" href="#work">Work</a>
+            <a class="btn primary" href="mailto:siddha3014@uchicago.edu">Email</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
           </div>
 
-          <div id="work" class="pills" style="scroll-margin-top: 80px;">
+          <div id="work" class="pills" style="scroll-margin-top: 100px;">
             <a class="pill-link" href="causal.html">Causal inference</a>
             <a class="pill-link" href="policy.html">Policy and economic development</a>
             <a class="pill-link" href="finance.html">Applied finance</a>
@@ -73,28 +76,40 @@
               <p class="mini-text">Same toolkit, different domains. Policy, strategy, consulting, and finance.</p>
             </div>
           </div>
+
+          <p class="micro-note" style="font-size: 11px; color: var(--muted); margin-top: 12px;">
+            Want the work. Click a category above.
+          </p>
         </div>
       </div>
     </section>
 
     <section id="about" class="card section">
       <h2 class="h2">About</h2>
-      <p class="lead">I care about questions where evidence changes decisions. I like institutional detail and real constraints. I build transparent models and communicate results clearly.</p>
+      <p class="lead">
+        I care about questions where evidence changes decisions. I like institutional detail and real constraints. I build transparent models and communicate results clearly.
+      </p>
     </section>
 
     <div class="footer" style="text-align: center; padding: 20px;">
       <a href="mailto:siddha3014@uchicago.edu">siddha3014@uchicago.edu</a>
       <span class="sep">•</span>
-      <a href="https://linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/siddha-khatal-16673021a/" target="_blank">LinkedIn</a>
     </div>
   </main>
 
   <script>
     const overlay = document.getElementById('funfactOverlay');
-    document.getElementById('photoBtn').onclick = () => overlay.classList.add('show');
-    document.getElementById('funfactClose').onclick = () => overlay.classList.remove('show');
-    document.getElementById('okBtn').onclick = () => overlay.classList.remove('show');
-    window.onclick = (e) => { if (e.target == overlay) overlay.classList.remove('show'); }
+    const photoBtn = document.getElementById('photoBtn');
+    const closeBtn = document.getElementById('funfactClose');
+    const okBtn = document.getElementById('okBtn');
+
+    photoBtn.onclick = () => overlay.classList.add('show');
+    closeBtn.onclick = okBtn.onclick = () => overlay.classList.remove('show');
+    
+    window.onclick = (e) => {
+      if (e.target == overlay) overlay.classList.remove('show');
+    }
   </script>
 </body>
 </html>
